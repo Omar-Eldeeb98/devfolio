@@ -1,0 +1,463 @@
+/*========================================== start global ===========================================*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+/*========================================== end global ===========================================*/
+
+/*========================================== start navbar ===========================================*/
+.navbar {
+    background-color: rgba(0, 0, 0, 0.862);
+    margin-bottom: 50px;
+    z-index: 999;
+}
+
+
+.home_anchor,
+.about_anchor,
+.services_anchor,
+.portfolio_anchor,
+.blog_anchor,
+.contact_anchor {
+    position: relative;
+}
+
+.sections_link::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    height: 2px;
+    width: 0%;
+    background-color: white;
+    transform: translateX(-50%);
+    transition: width 0.5s;
+}
+
+body:not(:has(:target)) .home_anchor::after {
+    width: 95%;
+}
+
+body:has(#home:target) .home_anchor::after {
+    width: 95%;
+}
+
+body:has(#about:target) .about_anchor::after {
+    width: 95%;
+}
+
+body:has(#services:target) .services_anchor::after {
+    width: 95%;
+}
+
+body:has(#portfolio:target) .portfolio_anchor::after {
+    width: 95%;
+}
+
+body:has(#blog:target) .blog_anchor::after {
+    width: 95%;
+}
+
+
+body:has(#contact:target) .contact_anchor::after {
+    width: 95%;
+}
+
+
+/*==========================================================*/
+
+/* .dropdown_li {
+    display: relative;
+}
+
+.dropdown_li::after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    height: 2px;
+    width: 0;
+    background-color: #0078FF;
+    transform: translateX(-50%);
+    transition: width 0.5s;
+}
+.dropdown_li:hover::after {
+    width: 100%;
+}
+ */
+/*==========================================================*/
+
+/*========================================== end navbar ===========================================*/
+
+
+/*========================================== start home ===========================================*/
+#home {
+    background-image: linear-gradient(#00000099, #00000099), url(../assets/images/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 50px;
+}
+
+.home_caption h1 {
+    font-size: 70px;
+    padding-bottom: 40px;
+}
+
+.home_caption p {
+
+
+
+    width: 70%;
+    font-size: 25px;
+    border-right: 4px solid #fff;
+    white-space: nowrap;
+    animation-name: typing;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes typing {
+    0% {
+        width: 70%;
+
+    }
+
+    100% {
+        width: 0%;
+    }
+}
+
+/*========================================== end home ===========================================*/
+
+/*========================================== start about ===========================================*/
+#about {
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+}
+
+#about .container {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#about .container .about_info .data p {
+    font-size: 17.5px;
+}
+
+
+#about .container .about_info .data p span {
+    font-size: 17.5px;
+}
+
+#about .container .about_text h2 {
+    margin-bottom: 50px;
+}
+
+#about .container .about_text h2::after {
+
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: #0078FF;
+    margin-top: 10px;
+
+}
+
+/*========================================== end about ===========================================*/
+
+/*========================================== end services ===========================================*/
+#services {
+    margin-bottom: 50px;
+}
+
+#services h2 {
+    font-size: 50px;
+}
+
+#services .line {
+    margin: 5px auto;
+    width: 50px;
+    height: 4px;
+    background-color: #0078FF;
+}
+
+.service_card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.service_card .icon_container {
+
+    width: 100px;
+    height: 100px;
+    font-size: 35px;
+    margin-inline: auto;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+
+
+}
+
+
+.service_card .icon_container i {
+
+    padding-top: 25%;
+    width: 100%;
+    height: 100%;
+    border: 8px solid #0078FF;
+    transition: color 1s, background-color 1s, border 1s;
+    border-radius: 50%;
+
+}
+
+.service_card:hover .icon_container i {
+    color: white;
+    background-color: #0078FF;
+    border: 8px solid var(--bs-gray-400);
+}
+
+/*========================================== end services ===========================================*/
+
+/*========================================== start counter ===========================================*/
+#counter {
+    margin-bottom: 50px;
+    background-image: linear-gradient(#0077ffb6, #0077ffb6), url(../assets/images/post-3.jpg);
+    background-position: 100% 100%;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+#counter .container {
+    padding: 30px 20px;
+}
+
+.item i {
+    width: 100px;
+    height: 100px;
+    font-size: 40px;
+}
+
+/*========================================== end counter ===========================================*/
+
+/*========================================== start portfolio ===========================================*/
+#portfolio {
+    margin-bottom: 50px;
+}
+
+#portfolio h2 {
+    font-size: 50px;
+}
+
+#portfolio .line {
+    margin: 5px auto;
+    width: 50px;
+    height: 4px;
+    background-color: #0078FF;
+}
+
+.info_div .left h5 {
+    font-weight: bold;
+    font-size: 18px;
+    text-align: start;
+}
+
+.info_div .left span {
+    display: inline-block;
+    font-size: 16px;
+    text-align: start;
+}
+
+.portfolio_card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+.portfolio_card .image_div {
+    overflow: hidden;
+
+}
+
+.portfolio_card .image_div img {
+
+    transition: transform 1s;
+}
+
+
+.portfolio_card .image_div:hover img {
+    transform: scale(1.2);
+}
+
+/*========================================== end portfolio ===========================================*/
+
+/*========================================== start testmonial ===========================================*/
+#testmonial {
+    padding: 60px 20px;
+    margin-bottom: 50px;
+    background-image: linear-gradient(#0077ffb6, #0077ffb6), url(../assets/images/overlay-bg.jpg);
+    background-position: 100% 100%;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+/*========================================== end testmonial ===========================================*/
+
+
+/*========================================== start Blog ===========================================*/
+#blog {
+    margin-bottom: 60px;
+}
+
+#blog .container h2 {
+    font-size: 50px;
+}
+
+#blog .container .line {
+    margin: 5px auto;
+    width: 50px;
+    height: 4px;
+    background-color: #0078FF;
+
+}
+
+.card-body h5 {
+    cursor: pointer;
+    transition: color 0.5s;
+}
+
+.card-body h5:hover {
+    color: #0078FF;
+}
+
+/*badge setting position*/
+/* .card-body .badge_h {
+    background-color: red;
+    width: fit-content;
+    padding: 5px 20px;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: normal;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
+/*========================================== end Blog ===========================================*/
+
+/*========================================== start contact ===========================================*/
+#contact {
+    background-image: linear-gradient(#0077ffb6, #0077ffb6), url(../assets/images/overlay-bg.jpg);
+    background-position: 100% 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: auto;
+    padding: 40px;
+
+
+}
+
+#contact .contact_div {
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #fff;
+    width: 100%;
+
+    margin-block: 60px;
+
+}
+
+#contact h2::after {
+    position: absolute;
+    content: '';
+    top: 120%;
+    left: 0;
+    width: 120px;
+    height: 3px;
+    background-color: #0078FF;
+
+}
+
+#contact form textarea {
+    resize: vertical;
+}
+
+#contact form .btn_container {
+    text-align: center;
+    padding: 20px;
+}
+
+#contact form .btn_container button {
+
+
+    background-color: #0078FF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 40px;
+    font-size: 20px;
+    margin-top: 15px;
+    transition: outline 0.5s;
+}
+
+#contact form .btn_container button:hover {
+
+    outline: 4px solid var(--bs-gray-400);
+
+}
+
+#contact .social_media i {
+    margin-top: 20px;
+    font-size: 30px;
+    padding: 10px;
+    border: 4px solid #0078FF;
+    border-radius: 50%;
+    margin-right: 5px;
+    transition: all 0.5s;
+
+}
+
+#contact .social_media i:hover {
+    color: #fff;
+    border-color: var(--bs-gray-500);
+    background-color: #0078FF;
+
+}
+
+/*========================================== end contact ===========================================*/
+
+/*========================================== start footer ===========================================*/
+#footer {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #0078FF;
+    padding: 20px;
+}
+
+/*========================================== end footer ===========================================*/
